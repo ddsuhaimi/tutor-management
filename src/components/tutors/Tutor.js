@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { FaEdit, FaTrash, FaDeaf } from "react-icons/fa";
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import {  toggleModal, deleteTutor, getTutor } from '../../actions/tutorAction'
+import {  toggleModal, deleteTutor, getTutor, refreshFilteredTutors } from '../../actions/tutorAction'
 
 export class Tutor extends Component {
 
   handleDelete = id => {
     this.props.deleteTutor(id)
+    this.props.refreshFilteredTutors()
   }
   handleEdit = id => {
     this.props.getTutor(id)
@@ -62,4 +63,4 @@ export class Tutor extends Component {
   }
 }
 
-export default connect(null, { deleteTutor, toggleModal, getTutor })(Tutor);
+export default connect(null, { deleteTutor, toggleModal, getTutor, refreshFilteredTutors })(Tutor);
