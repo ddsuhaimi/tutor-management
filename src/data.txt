@@ -1,0 +1,57 @@
+[
+  '{{repeat(5, 5)}}',
+  {
+    _id: '{{objectId()}}',
+    index: '{{index()}}',
+    is_recommended: '{{bool()}}',
+    rate: '{{integer(10, 22, "$0,0.00")}}',
+    //picture: 'http://placehold.it/128x128',
+    age: '{{integer(18, 30)}}',
+    experience: '{{integer(1, 10)}}',
+    
+    //subject: '{{random("Mathematics", "Physics", "Chemistry", "English", "Mandarin", "")}}',
+    name: '{{firstName()}} {{surname()}}',
+    gender: '{{gender()}}',
+    // company: '{{company().toUpperCase()}}',
+    email: '{{email()}}',
+    phone: '+1 {{phone()}}',
+    image: function(x){
+      var g = this.gender === 'male' ? 'men' : 'women';
+      return "https://randomuser.me/api/portraits/" + g +"/" + this.index + ".jpg";
+    },
+    address: {
+      street: '{{integer(100, 999)}} {{street()}}',
+      city: '{{city()}}',
+      state: '{{state()}}'
+    }, 
+    //' {{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}',
+    //about: '{{lorem(1, "paragraphs")}}',
+    //registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+    //latitude: '{{floating(-90.000001, 90)}}',
+    //longitude: '{{floating(-180.000001, 180)}}',
+    subjects: function (tags) {
+      var fruits = ["Mathematics", "Physics", "Chemistry", "English", "Mandarin", "Latin", "Spanish", "Biology", "Geography", "Computer", "History"];
+      function getRandomSubarray(arr, size) {
+          var shuffled = arr.slice(0), i = arr.length, temp, index;
+          while (i--) {
+              index = Math.floor((i + 1) * Math.random());
+              temp = shuffled[index];
+              shuffled[index] = shuffled[i];
+              shuffled[i] = temp;
+          }
+          return shuffled.slice(0, size);
+		}
+      
+      
+      function getRandomIntInclusive(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+        }
+      
+      
+      
+      return getRandomSubarray(fruits, getRandomIntInclusive(1, 5));
+    }
+  }
+]

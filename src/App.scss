@@ -1,0 +1,14 @@
+@import 'bulma';
+
+.is-vertical-centered {
+  display: flex;
+  align-items: center;
+}
+
+.is-justify-space-around {
+  justify-content: space-evenly;
+}
+
+.btn-action button {
+  margin-right: 0.5em;
+}
