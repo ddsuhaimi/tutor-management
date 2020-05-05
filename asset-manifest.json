@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tutor-management/static/css/main.a485a674.chunk.css",
+    "main.js": "/tutor-management/static/js/main.d8ae307e.chunk.js",
+    "main.js.map": "/tutor-management/static/js/main.d8ae307e.chunk.js.map",
+    "runtime-main.js": "/tutor-management/static/js/runtime-main.5cadc3ac.js",
+    "runtime-main.js.map": "/tutor-management/static/js/runtime-main.5cadc3ac.js.map",
+    "static/js/2.7116fcf2.chunk.js": "/tutor-management/static/js/2.7116fcf2.chunk.js",
+    "static/js/2.7116fcf2.chunk.js.map": "/tutor-management/static/js/2.7116fcf2.chunk.js.map",
+    "index.html": "/tutor-management/index.html",
+    "precache-manifest.cb46aea0da1d33cbe585d813210d56c5.js": "/tutor-management/precache-manifest.cb46aea0da1d33cbe585d813210d56c5.js",
+    "service-worker.js": "/tutor-management/service-worker.js",
+    "static/css/main.a485a674.chunk.css.map": "/tutor-management/static/css/main.a485a674.chunk.css.map",
+    "static/js/2.7116fcf2.chunk.js.LICENSE.txt": "/tutor-management/static/js/2.7116fcf2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5cadc3ac.js",
+    "static/js/2.7116fcf2.chunk.js",
+    "static/css/main.a485a674.chunk.css",
+    "static/js/main.d8ae307e.chunk.js"
+  ]
+}
