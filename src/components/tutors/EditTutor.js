@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { toggleModal, updateTutor, clearTutor, refreshFilteredTutors } from "../../actions/tutorAction";
-import { filterTutors } from '../../actions/helper'
 
 export class EditTutor extends Component {
   state = {

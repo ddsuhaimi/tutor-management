@@ -34,7 +34,7 @@ export default function (state = initialState, action) {
     case DELETE_TUTOR:
       return {
         ...state,
-        tutors: state.tutors.filter((tutor) => tutor._id != action.payload),
+        tutors: state.tutors.filter((tutor) => tutor._id !== action.payload),
       };
     case ADD_TUTOR:
       return {

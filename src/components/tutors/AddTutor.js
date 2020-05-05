@@ -38,7 +38,7 @@ export class AddTutor extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const {
-      id,
+      // id,
       name,
       email,
       phone,

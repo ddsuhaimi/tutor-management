@@ -16,23 +16,23 @@ export const filterTutors = (tutors, criteria) => {
     );
   }
 
-  if (subject != "") {
+  if (subject !== "") {
     tempTutors = tempTutors.filter(
       (tutor) => tutor.subject.toLowerCase() === subject.toLowerCase()
     );
   }
 
-  if (rate != "$.00") {
+  if (rate !== "$.00") {
     tempTutors = tempTutors.filter((tutor) => tutor.rate === rate);
   }
 
-  if (state != "") {
+  if (state !== "") {
     tempTutors = tempTutors.filter(
       (tutor) => tutor.address.state.toLowerCase() === state.toLowerCase()
     );
   }
 
-  if (city != "") {
+  if (city !== "") {
     tempTutors = tempTutors.filter(
       (tutor) => tutor.address.city.toLowerCase() === city.toLowerCase()
     );

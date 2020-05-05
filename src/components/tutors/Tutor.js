@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { FaEdit, FaTrash, FaDeaf } from "react-icons/fa";
-import PropTypes from 'prop-types'
+import { FaEdit, FaTrash } from "react-icons/fa";
 import { connect } from 'react-redux'
 import {  toggleModal, deleteTutor, getTutor, refreshFilteredTutors } from '../../actions/tutorAction'
 
@@ -17,7 +16,7 @@ export class Tutor extends Component {
   render() {
     const {
       _id,
-      image,
+      // image,
       name,
       age,
       experience,

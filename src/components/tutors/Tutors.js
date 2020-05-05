@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Tutor from "./Tutor";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { FaUserPlus } from "react-icons/fa";
 import { getTutors, toggleModal, getFilteredTutors } from "../../actions/tutorAction";
@@ -17,7 +16,7 @@ export class Tutors extends Component {
     this.props.toggleModal();
   };
   render() {
-    const { tutors, isModalOpen, tutor, filteredTutors } = this.props;
+    const { isModalOpen, tutor, filteredTutors } = this.props;
     return (
       <>
         <div style={{ padding: "1em" }} className="container-fluid">
